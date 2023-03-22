@@ -5,11 +5,16 @@ module.exports = {
     extend: {
       fontFamily: {
         'ibm-plex-mono': ['IBM Plex Mono', 'monospace']
+      },
+      screens: {
+        '2xs': '375px',
+        xs: '425px'
       }
     },
     colors: {
       neutral: {
         50: '#F5F5F5',
+        75: '#E9E9E9',
         100: '#DDDDDD',
         200: '#C4C4C4',
         300: '#ACACAC',
@@ -27,7 +32,8 @@ module.exports = {
           500: '#E65F5C',
         }
       }
-    }
+    },
+    
   },
   plugins: [],
 }

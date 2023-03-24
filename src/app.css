@@ -170,3 +170,10 @@
     url('/fonts/ibm-plex-mono-v15-latin-600italic.svg#IBMPlexMono') format('svg');
   /* Legacy iOS */
 }
+
+/* General Styling */
+@layer base {
+  body {
+    @apply m-0 bg-neutral-50 text-neutral-700 font-ibm-plex-mono overflow-x-hidden;
+  }
+}

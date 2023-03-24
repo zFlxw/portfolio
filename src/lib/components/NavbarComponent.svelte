@@ -20,7 +20,7 @@
 </script>
 
 {#if burgerMenuOpen}
-  <div class="w-screen fixed flex flex-col gap-8 bg-neutral-900">
+  <div class="w-screen fixed flex xl:hidden flex-col gap-8 bg-neutral-900">
     <div
       class="absolute text-neutral-400 right-8 top-8"
       on:click|preventDefault={() => (burgerMenuOpen = false)}

@@ -57,7 +57,7 @@
           <li><a href="/projects">My Projects</a></li>
         </ul>
         <!-- ONLY MOBILE -->
-        <div class="flex xl:hidden flex-col sm:flex-row gap-5">
+        <div class="flex xl:hidden flex-col my-12 sm:my-0 sm:flex-row gap-5">
           <Button>
             <a href="/about">About Me</a>
           </Button>
@@ -69,7 +69,7 @@
       <img
         src="/img/avatars/blue-avatar-crop.png"
         alt="Wolf Avatar (Light)"
-        class="w-full max-w-2xs xl:max-w-xs "
+        class="w-full mt-12 md:mt-0 max-w-2xs xl:max-w-xs "
       />
     </div>
     <div class="mt-12">
@@ -94,7 +94,7 @@
           on:keydown|preventDefault={() => (showDiscord = !showDiscord)}
         >
           {#if showDiscord}
-            <TooltipComponent>
+            <TooltipComponent id="discord">
               <p
                 class={`${copied ? 'text-primary-green' : 'text-neutral-50 '}`}
               >
@@ -106,7 +106,7 @@
                   on:keydown|preventDefault={() => copyDiscordUsername()}
                   id="discord"
                 >
-                  <Copy size={20} class="hoverable" />
+                  <Copy size={20} class="hoverable" id="discord" />
                 </div>
               {/if}
             </TooltipComponent>

@@ -1,4 +1,9 @@
+<script lang="ts">
+  export let id: string;
+</script>
+
 <div
+  {id}
   class="flex gap-4 items-center absolute left-1/2 -translate-x-1/2 -top-14 bg-neutral-900 px-4 py-3 rounded-md arrow-center-bottom"
 >
   <slot />

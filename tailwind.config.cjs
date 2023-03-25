@@ -9,6 +9,9 @@ module.exports = {
       screens: {
         '2xs': '375px',
         xs: '425px'
+      },
+      maxWidth: {
+        '2xs': '16rem'
       }
     },
     colors: {

@@ -4,6 +4,7 @@
   import TooltipComponent from '$lib/components/TooltipComponent.svelte';
   import { Github, Copy } from 'lucide-svelte';
   import CopyToClipboard from '$lib/components/utils/CopyToClipboard.svelte';
+  import Button from '$lib/components/Button.svelte';
 
   const discordName = 'Flxw#7928';
 
@@ -38,27 +39,37 @@
   on:keydown|preventDefault={hideDiscordUsername}
 >
   <NavbarComponent />
-  <main class="w-full max-w-6xl m-auto">
-    <div class="w-full flex items-center justify-center">
-      <div class="w-full flex flex-col gap-8">
-        <h1 class="font-semibold text-6xl text-neutral-800">
+  <main class="w-full max-w-4xl xl:max-w-6xl m-auto px-8">
+    <div class="w-full flex flex-col-reverse lg:flex-row gap-8 lg:gap-0 items-center justify-center">
+      <div class="w-full flex flex-col items-center lg:items-start gap-8">
+        <h1 class="text-center lg:text-left font-semibold text-5xl xl:text-6xl text-neutral-800">
           Developer<span>.</span><br />
           Student<span>.</span>
         </h1>
-        <h2 class="text-2xl max-w-[36ch]">
+        <h2 class="text-center lg:text-left text-xl xl:text-2xl max-w-[36ch]">
           Hey. I am Maik, also known as Flxw, and I code stuff. Learn more about
           me here:
         </h2>
-        <ul class="text-2xl text-primary-blue">
+        <!-- ONLY DESKTOP -->
+        <ul class="hidden xl:block text-xl xl:text-2xl text-primary-blue">
           <li><a href="/about">About Me</a></li>
           <li><a href="/skills">My Skills</a></li>
           <li><a href="/projects">My Projects</a></li>
         </ul>
+        <!-- ONLY MOBILE -->
+        <div class="flex xl:hidden flex-col sm:flex-row gap-5">
+          <Button>
+            <a href="/about">About Me</a>
+          </Button>
+          <Button>
+            <a href="/projects">My Projects</a>
+          </Button>
+        </div>
       </div>
       <img
         src="/img/avatars/blue-avatar-crop.png"
         alt="Wolf Avatar (Light)"
-        class="w-full max-w-xs "
+        class="w-full max-w-2xs xl:max-w-xs "
       />
     </div>
     <div class="mt-12">

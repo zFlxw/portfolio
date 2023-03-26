@@ -9,6 +9,9 @@ module.exports = {
       screens: {
         '2xs': '375px',
         xs: '425px'
+      },
+      maxWidth: {
+        '2xs': '16rem'
       }
     },
     colors: {
@@ -27,6 +30,7 @@ module.exports = {
       },
       primary: {
         blue: '#0075F2',
+        green: '#00E676',
         red: {
           400: '#CF5653',
           500: '#E65F5C',

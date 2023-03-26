@@ -12,8 +12,10 @@
   $: showDiscord = false;
   $: currentValue = discordName;
 
+  $: showDiscord, console.log(showDiscord);
+
   function hideDiscordUsername(event: any) {
-    if (showDiscord && event.target.id !== 'discord') {
+    if (showDiscord && !copied && event.target.id !== 'discord') {
       showDiscord = false;
     }
   }
@@ -29,20 +31,25 @@
     setTimeout(() => {
       copied = false;
       currentValue = discordName;
+      showDiscord = false;
     }, 2000);
   }
 </script>
 
 <div
   class="min-h-screen grid grid-rows-[min-content_1fr]"
-  on:click|preventDefault={hideDiscordUsername}
-  on:keydown|preventDefault={hideDiscordUsername}
+  on:click={hideDiscordUsername}
+  on:keydown={hideDiscordUsername}
 >
   <NavbarComponent />
   <main class="w-full max-w-4xl xl:max-w-6xl m-auto px-8">
-    <div class="w-full flex flex-col-reverse lg:flex-row gap-8 lg:gap-0 items-center justify-center">
+    <div
+      class="w-full flex flex-col-reverse lg:flex-row gap-8 lg:gap-0 items-center justify-center"
+    >
       <div class="w-full flex flex-col items-center lg:items-start gap-8">
-        <h1 class="text-center lg:text-left font-semibold text-5xl xl:text-6xl text-neutral-800">
+        <h1
+          class="text-center lg:text-left font-semibold text-5xl xl:text-6xl text-neutral-800"
+        >
           Developer<span>.</span><br />
           Student<span>.</span>
         </h1>
@@ -57,7 +64,7 @@
           <li><a href="/projects">My Projects</a></li>
         </ul>
         <!-- ONLY MOBILE -->
-        <div class="flex xl:hidden flex-col my-12 sm:my-0 sm:flex-row gap-5">
+        <div class="flex xl:hidden flex-col my-8 sm:my-0 sm:flex-row gap-5">
           <Button>
             <a href="/about">About Me</a>
           </Button>
@@ -69,7 +76,7 @@
       <img
         src="/img/avatars/blue-avatar-crop.png"
         alt="Wolf Avatar (Light)"
-        class="w-full mt-12 md:mt-0 max-w-2xs xl:max-w-xs "
+        class="w-full mt-12 lg:mt-0 max-w-2xs xl:max-w-xs "
       />
     </div>
     <div class="mt-12">
@@ -88,22 +95,19 @@
           rel="noopener noreferrer"
           ><Github size={48} strokeWidth={1.5} class="hoverable" /></a
         >
-        <div
-          class="relative"
-          on:click|preventDefault={() => (showDiscord = !showDiscord)}
-          on:keydown|preventDefault={() => (showDiscord = !showDiscord)}
-        >
+        <div class="relative">
           {#if showDiscord}
             <TooltipComponent id="discord">
               <p
+                id="discord"
                 class={`${copied ? 'text-primary-green' : 'text-neutral-50 '}`}
               >
                 {currentValue}
               </p>
               {#if !copied}
                 <div
-                  on:click|preventDefault={() => copyDiscordUsername()}
-                  on:keydown|preventDefault={() => copyDiscordUsername()}
+                  on:click={() => copyDiscordUsername()}
+                  on:keydown={() => copyDiscordUsername()}
                   id="discord"
                 >
                   <Copy size={20} class="hoverable" id="discord" />
@@ -117,6 +121,8 @@
             viewBox="0 0 128 128"
             id="discord"
             stroke-width={3}
+            on:click={() => (showDiscord = !showDiscord)}
+            on:keydown={() => (showDiscord = !showDiscord)}
             ><path
               stroke-width={3}
               id="discord"

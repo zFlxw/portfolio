@@ -12,8 +12,6 @@
   $: showDiscord = false;
   $: currentValue = discordName;
 
-  $: showDiscord, console.log(showDiscord);
-
   function hideDiscordUsername(event: any) {
     if (showDiscord && !copied && event.target.id !== 'discord') {
       showDiscord = false;

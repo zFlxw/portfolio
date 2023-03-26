@@ -1,13 +1,17 @@
 <script lang="ts">
   import { Menu, Sun, Moon, X } from 'lucide-svelte';
-  import { prevent_default } from 'svelte/internal';
   import { crossfade } from 'svelte/transition';
+  import { darkmode } from '$lib/stores/preferences.store';
   const tabs = [
     { name: 'Home', ref: '/' },
     { name: 'About', ref: '/about' },
     { name: 'Skills', ref: '/skills' },
     { name: 'Projects', ref: '/projects' },
   ];
+
+  $: imageSource = $darkmode
+    ? '/img/avatars/red-avatar-crop.png'
+    : '/img/avatars/blue-avatar-crop.png';
 
   let burgerMenuOpen = false;
   let selected = 'Home';
@@ -43,48 +47,67 @@
     </ul>
   </div>
 {/if}
-<nav
-  class="text-neutral-800 flex items-center justify-between px-12 py-2 border-b border-b-neutral-100 w-full"
->
-  <img
-    src="/img/avatars/blue-avatar-crop.png"
-    alt="wolf-avatar"
-    class="w-[40px]"
-  />
-  <p class="block xl:hidden text-neutral-700 text-2xl">Homepage</p>
-  <div on:click|preventDefault={() => (burgerMenuOpen = true)}
-      on:keydown|preventDefault={() => (burgerMenuOpen = true)}>
-      <Menu class="block xl:hidden text-neutral-800" size={36} strokeWidth={1} />
-  </div>
-  <div class="hidden xl:flex items-center gap-8">
-    <ul class="flex gap-2 font-medium text-xl">
-      {#each tabs as tab, index}
-        <li
-          class={`relative before:text-primary-blue before:font-normal before:content-[var(--content)] cursor-pointer py-2 px-4`}
-          style={`--content: '${
-            (index + 1).toString().padStart(2, '0') + '. '
-          }'`}
-          on:click|preventDefault={() => (selected = tab.name)}
-          on:keydown={() => (selected = tab.name)}
-        >
-          {#if selected === tab.name}
-            <span
-              class="selected-bg"
-              in:receive={{ key: token }}
-              out:send={{ key: token }}
-            />
-          {/if}
-          <a href={tab.ref}>{tab.name}</a>
-        </li>
-      {/each}
-    </ul>
-    <Moon
-      size={36}
-      strokeWidth={1.5}
-      class="text-neutral-200 cursor-pointer hover:text-neutral-400 transition"
-    />
-  </div>
-</nav>
+<div class={$darkmode ? 'dark' : ''}>
+  <nav
+    class="text-neutral-800 dark:text-neutral-200 flex items-center justify-between px-12 py-2 border-b border-b-neutral-100 dark:border-b-neutral-700 w-full transition-colors "
+  >
+    <img src={imageSource} alt="wolf-avatar" class="w-[40px]" />
+    <p class="block xl:hidden text-neutral-700 dark:text-neutral-300 text-2xl">
+      Homepage
+    </p>
+    <div
+      on:click|preventDefault={() => (burgerMenuOpen = true)}
+      on:keydown|preventDefault={() => (burgerMenuOpen = true)}
+    >
+      <Menu
+        class="block xl:hidden text-neutral-800 dark:text-neutral-100"
+        size={36}
+        strokeWidth={1}
+      />
+    </div>
+    <div class="hidden xl:flex items-center gap-8">
+      <ul class="flex gap-2 font-medium text-xl">
+        {#each tabs as tab, index}
+          <li
+            class={`relative before:text-primary-blue dark:before:text-primary-red-500 before:font-normal before:content-[var(--content)] cursor-pointer py-2 px-4`}
+            style={`--content: '${
+              (index + 1).toString().padStart(2, '0') + '. '
+            }'`}
+            on:click|preventDefault={() => (selected = tab.name)}
+            on:keydown={() => (selected = tab.name)}
+          >
+            {#if selected === tab.name}
+              <span
+                class="selected-bg"
+                in:receive={{ key: token }}
+                out:send={{ key: token }}
+              />
+            {/if}
+            <a href={tab.ref}>{tab.name}</a>
+          </li>
+        {/each}
+      </ul>
+      <div
+        on:click|preventDefault={() => darkmode.set(!$darkmode)}
+        on:keydown|preventDefault={() => darkmode.set(!$darkmode)}
+      >
+        {#if $darkmode}
+          <Sun
+            size={36}
+            strokeWidth={1.5}
+            class="text-neutral-600 cursor-pointer hover:text-neutral-300 transition"
+          />
+        {:else}
+          <Moon
+            size={36}
+            strokeWidth={1.5}
+            class="text-neutral-200 cursor-pointer hover:text-neutral-400 transition"
+          />
+        {/if}
+      </div>
+    </div>
+  </nav>
+</div>
 
 <style lang="scss">
   .selected-bg,

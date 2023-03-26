@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['./src/**/*.{html,js,svelte,ts}'],
+  darkMode: 'class',
   theme: {
     extend: {
       fontFamily: {
@@ -22,7 +23,7 @@ module.exports = {
         200: '#C4C4C4',
         300: '#ACACAC',
         400: '#939393',
-        500: '7B7B7B', 
+        500: '#7B7B7B', 
         600: '#626262',
         700: '#494949',
         800: '#313131',

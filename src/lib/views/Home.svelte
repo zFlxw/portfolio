@@ -74,16 +74,16 @@
         </Button>
       </div>
     </div>
-    <div class="relative w-full mt-12 lg:mt-0 max-w-2xs xl:max-w-xs">
+    <div class="relative w-full mt-12 lg:mt-0 max-w-2xs aspect-square xl:max-w-xs">
       <img
         src={blueAvatar}
         alt="Wolf Avatar"
-        class="opacity-100 dark:opacity-0 absolute left-0 -top-1/2 -translate-y-1/2 transition"
+        class="opacity-100 dark:opacity-0 absolute left-0 top-1/2 -translate-y-1/2 transition"
       />
       <img
         src={redAvatar}
         alt="Wolf Avatar"
-        class="opacity-0 dark:opacity-100 absolute left-0 -top-1/2 -translate-y-1/2 transition"
+        class="opacity-0 dark:opacity-100 absolute left-0 top-1/2 -translate-y-1/2 transition"
       />
     </div>
   </div>

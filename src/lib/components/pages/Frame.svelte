@@ -6,7 +6,7 @@
 
 <div class={`${$darkmode ? 'dark' : ''}`}>
   <div
-    class="min-h-screen grid grid-rows-[min-content_1fr] bg-neutral-50 text-neutral-700 dark:bg-neutral-800 dark:text-neutral-300 transition-all duration-50"
+    class="min-h-screen grid grid-rows-[min-content_1fr] bg-neutral-50 text-neutral-700 dark:bg-neutral-800 dark:text-neutral-300 transition-all"
   >
     <Navbar />
     <slot />

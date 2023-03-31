@@ -23,8 +23,8 @@
   });
 
   function changeTab(newTab: string) {
-    selected = newTab;
     activePage.set(tabs.findIndex((tab) => tab.name === newTab));
+    selected = newTab;
   }
 </script>
 

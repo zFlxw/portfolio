@@ -2,6 +2,7 @@
   import Footer from '$lib/components/Footer.svelte';
   import Navbar from '$lib/components/Navbar.svelte';
   import { darkmode } from '$lib/stores/preferences.store';
+  import { fly } from 'svelte/transition';
 </script>
 
 <div class={`${$darkmode ? 'dark' : ''}`}>

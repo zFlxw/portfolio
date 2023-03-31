@@ -39,7 +39,7 @@
   class="w-full max-w-4xl xl:max-w-6xl m-auto px-8"
   on:click={hideDiscordUsername}
   on:keydown={hideDiscordUsername}
-  in:fly="{{ y: 100, duration: 250, delay: 300 }}"
+  in:fly="{{ y: -100, duration: 250, delay: 300 }}"
   out:fly="{{ y: 100, duration: 250 }}" 
 >
   <div
@@ -87,7 +87,7 @@
       />
     </div>
   </div>
-  <div class="mt-12">
+  <div class="mt-12 xl:mt-24">
     <div class="relative">
       <hr
         class="text-neutral-200 bg-neutral-200 dark:text-neutral-700 dark:bg-neutral-700 h-[2px] transition-colors"

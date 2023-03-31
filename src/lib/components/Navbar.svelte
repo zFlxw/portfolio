@@ -57,9 +57,6 @@
     class="text-neutral-800 dark:text-neutral-200 flex items-center justify-between px-12 py-2 border-b border-b-neutral-100 dark:border-b-neutral-700 w-full transition-colors"
   >
     <img src={imageSource} alt="wolf-avatar" class="w-[40px]" />
-    <p class="block xl:hidden text-neutral-700 dark:text-neutral-300 text-2xl">
-      Homepage
-    </p>
     <div
       on:click|preventDefault={() => (burgerMenuOpen = true)}
       on:keydown|preventDefault={() => (burgerMenuOpen = true)}

@@ -8,9 +8,8 @@
   import { darkmode } from '$lib/stores/preferences.store';
 
   const discordName = 'Flxw#7928';
-  $: imageSource = $darkmode
-    ? '/img/avatars/red-avatar-crop.png'
-    : '/img/avatars/blue-avatar-crop.png';
+  const redAvatar = '/img/avatars/red-avatar-crop.png';
+  const blueAvatar = '/img/avatars/blue-avatar-crop.png';
 
   let copied = false;
   let showDiscord = false;
@@ -78,15 +77,24 @@
             </Button>
           </div>
         </div>
-        <img
-          src={imageSource}
-          alt="Wolf Avatar"
-          class="w-full mt-12 lg:mt-0 max-w-2xs xl:max-w-xs "
-        />
+        <div class="relative w-full mt-12 lg:mt-0 max-w-2xs xl:max-w-xs ">
+          <img
+            src={blueAvatar}
+            alt="Wolf Avatar"
+            class="opacity-100 dark:opacity-0 absolute left-0 -top-1/2 -translate-y-1/2 transition"
+          />
+          <img
+            src={redAvatar}
+            alt="Wolf Avatar"
+            class="opacity-0 dark:opacity-100 absolute left-0 -top-1/2 -translate-y-1/2 transition"
+          />
+        </div>
       </div>
       <div class="mt-12">
         <div class="relative">
-          <hr class="text-neutral-200 bg-neutral-200 dark:text-neutral-700 dark:bg-neutral-700 h-[3px] transition-colors" />
+          <hr
+            class="text-neutral-200 bg-neutral-200 dark:text-neutral-700 dark:bg-neutral-700 h-[3px] transition-colors"
+          />
           <p
             class="text-base font-medium absolute -top-3 left-1/2 -translate-x-1/2 bg-neutral-50 text-neutral-200 dark:text-neutral-700 dark:bg-neutral-800 uppercase px-4 transition-colors"
           >
@@ -98,7 +106,11 @@
             href="https://www.github.com/zFlxw"
             target="_blank"
             rel="noopener noreferrer"
-            ><Github size={48} strokeWidth={1.5} class="text-neutral-200 hover:text-neutral-400 dark:text-neutral-700 dark:hover:text-neutral-500 cursor-pointer transition duration-200 ease-in-out" /></a
+            ><Github
+              size={48}
+              strokeWidth={1.5}
+              class="text-neutral-200 hover:text-neutral-400 dark:text-neutral-700 dark:hover:text-neutral-500 cursor-pointer transition duration-200 ease-in-out"
+            /></a
           >
           <div class="relative">
             {#if showDiscord}
@@ -185,5 +197,4 @@
       @apply hover:underline cursor-pointer transition duration-100 ease-in-out;
     }
   }
-
 </style>

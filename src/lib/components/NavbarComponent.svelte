@@ -49,7 +49,7 @@
 {/if}
 <div class={$darkmode ? 'dark' : ''}>
   <nav
-    class="text-neutral-800 dark:text-neutral-200 flex items-center justify-between px-12 py-2 border-b border-b-neutral-100 dark:border-b-neutral-700 w-full transition-colors "
+    class="text-neutral-800 dark:text-neutral-200 flex items-center justify-between px-12 py-2 border-b border-b-neutral-100 dark:border-b-neutral-700 w-full transition-colors"
   >
     <img src={imageSource} alt="wolf-avatar" class="w-[40px]" />
     <p class="block xl:hidden text-neutral-700 dark:text-neutral-300 text-2xl">
@@ -66,7 +66,7 @@
       />
     </div>
     <div class="hidden xl:flex items-center gap-8">
-      <ul class="flex gap-2 font-medium text-xl">
+      <ul class="flex gap-2 font-medium text-xl z-10">
         {#each tabs as tab, index}
           <li
             class={`relative before:text-primary-blue dark:before:text-primary-red-500 before:font-normal before:content-[var(--content)] cursor-pointer py-2 px-4`}
@@ -78,12 +78,12 @@
           >
             {#if selected === tab.name}
               <span
-                class="selected-bg"
+                class="absolute bg-neutral-75 dark:bg-neutral-700 bottom-0 left-0 w-full h-full rounded-md -z-10 transition"
                 in:receive={{ key: token }}
                 out:send={{ key: token }}
               />
             {/if}
-            <a href={tab.ref}>{tab.name}</a>
+            <a href={tab.ref} class="z-10">{tab.name}</a>
           </li>
         {/each}
       </ul>
@@ -109,9 +109,3 @@
   </nav>
 </div>
 
-<style lang="scss">
-  .selected-bg,
-  .hover-bg:hover {
-    @apply absolute bg-neutral-75 bottom-0 left-0 w-full h-full -z-10 rounded-md;
-  }
-</style>

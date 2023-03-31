@@ -2,6 +2,7 @@
   import { Menu, Sun, Moon, X } from 'lucide-svelte';
   import { crossfade } from 'svelte/transition';
   import { darkmode } from '$lib/stores/preferences.store';
+  import { activePage } from '$lib/stores/active-page.store';
   const tabs = [
     { name: 'Home', ref: '/' },
     { name: 'About', ref: '/about' },
@@ -14,13 +15,17 @@
     : '/img/avatars/blue-avatar-crop.png';
 
   let burgerMenuOpen = false;
-  let selected = 'Home';
+  let selected = tabs[$activePage].name;
   let token = 'navbar';
 
   const [send, receive] = crossfade({
-    delay: 100,
     duration: (d) => Math.sqrt(d * 200),
   });
+
+  function changeTab(newTab: string) {
+    selected = newTab;
+    activePage.set(tabs.findIndex((tab) => tab.name === newTab));
+  }
 </script>
 
 {#if burgerMenuOpen}
@@ -73,8 +78,8 @@
             style={`--content: '${
               (index + 1).toString().padStart(2, '0') + '. '
             }'`}
-            on:click|preventDefault={() => (selected = tab.name)}
-            on:keydown={() => (selected = tab.name)}
+            on:click|preventDefault={() => (changeTab(tab.name))}
+            on:keydown|preventDefault={() => (changeTab(tab.name))}
           >
             {#if selected === tab.name}
               <span

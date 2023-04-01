@@ -1,6 +1,7 @@
 <script lang="ts">
   import { fly } from 'svelte/transition';
   import skillCards from '$lib/json/skill-cards.json';
+  import Tooltip from '$lib/components/Tooltip.svelte';
 
   let cards = skillCards;
 </script>
@@ -16,19 +17,25 @@
       An overview of tools and languages I use
     </h3>
   </div>
-  <div class="mt-12 w-full flex flex-col lg:flex-row lg:justify-center flex-shrink gap-8 text-center">
+  <div
+    class="mt-12 w-full flex flex-col lg:flex-row lg:justify-center flex-shrink gap-8 text-center"
+  >
     <div>
       <h4 class="text-xl">Front-end</h4>
-      <div
-        class="mt-4 grid grid-cols-1 2xs:grid-cols-2 sm:grid-cols-4 lg:grid-cols-3 gap-4"
-      >
+      <div class="card-wrapper">
         {#each cards.frontend as card}
           <a
             href={card.link}
             target="_blank"
             rel="noopener"
-            class="mx-auto p-6 border bg-neutral-75 border-neutral-200 rounded-lg w-36 h-36 flex items-center"
+            class="group relative mx-auto p-6 border bg-neutral-75 border-neutral-200 dark:bg-neutral-750 dark:border-neutral-700 rounded-lg w-36 h-36 flex items-center transition"
           >
+            <div class="hidden group-hover:block ">
+              <Tooltip id="skill-card">
+                <p class="text-neutral-50">{card.name}</p>
+              </Tooltip>
+            </div>
+
             <img
               src={`./img/skills/${card.source}`}
               alt={`${card.name} Logo`}
@@ -39,16 +46,19 @@
     </div>
     <div>
       <h4 class="text-xl">Back-end</h4>
-      <div
-        class="mt-4 grid grid-cols-1 2xs:grid-cols-2 sm:grid-cols-4 lg:grid-cols-3 gap-4"
-      >
+      <div class="card-wrapper">
         {#each cards.backend as card}
           <a
             href={card.link}
             target="_blank"
             rel="noopener"
-            class="mx-auto p-6 border bg-neutral-75 border-neutral-200 rounded-lg w-36 h-36 flex items-center cursor-pointer"
+            class="relative group mx-auto p-6 border bg-neutral-75 border-neutral-200 dark:bg-neutral-750 dark:border-neutral-700 rounded-lg w-36 h-36 flex items-center transition"
           >
+            <div class="hidden group-hover:block ">
+              <Tooltip id="skill-card">
+                <p class="text-neutral-50">{card.name}</p>
+              </Tooltip>
+            </div>
             <img
               src={`./img/skills/${card.source}`}
               alt={`${card.name} Logo`}
@@ -59,3 +69,9 @@
     </div>
   </div>
 </div>
+
+<style lang="scss">
+  .card-wrapper {
+    @apply mt-4 grid grid-cols-1 2xs:grid-cols-2 sm:grid-cols-4 lg:grid-cols-3 gap-4;
+  }
+</style>

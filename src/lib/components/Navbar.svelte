@@ -22,6 +22,8 @@
     duration: (d) => Math.sqrt(d * 200),
   });
 
+  $: $activePage, selected = tabs[$activePage].name;
+
   function changeTab(newTab: string) {
     selected = newTab;
     activePage.set(tabs.findIndex((tab) => tab.name === newTab));

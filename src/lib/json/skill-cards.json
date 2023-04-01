@@ -41,11 +41,6 @@
       "name": "Postgres",
       "link": "https://www.postgresql.org/",
       "source": "postgresql.png"
-    },
-    {
-      "name": "Postgres",
-      "link": "https://www.postgresql.org/",
-      "source": "postgresql.png"
     }
   ]
 }

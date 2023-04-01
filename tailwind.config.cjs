@@ -8,11 +8,12 @@ module.exports = {
         'ibm-plex-mono': ['IBM Plex Mono', 'monospace']
       },
       screens: {
-        '2xs': '375px',
+        '3xs': '375px',
+        '2xs': '390px',
         xs: '425px'
       },
       maxWidth: {
-        '2xs': '16rem'
+        '2xs': '16rem',
       }
     },
     colors: {

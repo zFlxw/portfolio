@@ -4,6 +4,7 @@
   import About from '$lib/views/About.svelte';
   import Skills from '$lib/views/Skills.svelte';
   import { activePage } from '$lib/stores/active-page.store';
+  import Projects from '$lib/views/Projects.svelte';
 
   function handleTabKeydown(
     event: KeyboardEvent & {
@@ -27,6 +28,8 @@
         <About />
       {:else if $activePage === 2}
         <Skills />
+      {:else if $activePage === 3}
+        <Projects />
       {/if}
     </Frame>
   </div>

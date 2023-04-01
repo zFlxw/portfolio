@@ -1,0 +1,46 @@
+{
+  "frontend": [
+    {
+      "name": "Svelte",
+      "link": "https://www.svelte.dev/",
+      "source": "svelte.png"
+    },
+    {
+      "name": "VueJS",
+      "link": "https://www.vuejs.org/",
+      "source": "vuejs.png"
+    },
+    {
+      "name": "Figma",
+      "link": "https://www.figma.com/",
+      "source": "figma.png"
+    },
+    {
+      "name": "TailwindCSS",
+      "link": "https://www.tailwindcss.com/",
+      "source": "tailwindcss.png"
+    }
+  ],
+  "backend": [
+    {
+      "name": "TypeScript",
+      "link": "https://www.typescriptlang.org/",
+      "source": "typescript.png"
+    },
+    {
+      "name": "Java",
+      "link": "https:/www.java.com/",
+      "source": "java.png"
+    },
+    {
+      "name": "NestJS",
+      "link": "https:/www.nestjs.com/",
+      "source": "nestjs.svg"
+    },
+    {
+      "name": "Postgres",
+      "link": "https://www.postgresql.org/",
+      "source": "postgresql.png"
+    }
+  ]
+}

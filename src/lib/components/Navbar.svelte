@@ -1,7 +1,7 @@
 <script lang="ts">
   import { Menu, Sun, Moon, X } from 'lucide-svelte';
   import { crossfade } from 'svelte/transition';
-  import { darkmode } from '$lib/stores/preferences.store';
+  import { preferencsStore } from '$lib/stores/preferences.store';
   import { activePage } from '$lib/stores/active-page.store';
   const tabs = [
     { name: 'Home', ref: '/' },
@@ -9,6 +9,8 @@
     { name: 'Skills', ref: '/skills' },
     { name: 'Projects', ref: '/projects' },
   ];
+
+  const { darkmode } = preferencsStore;
 
   $: imageSource = $darkmode
     ? '/img/avatars/red-avatar-crop.png'
@@ -22,7 +24,7 @@
     duration: (d) => Math.sqrt(d * 200),
   });
 
-  $: $activePage, selected = tabs[$activePage].name;
+  $: $activePage, (selected = tabs[$activePage].name);
 
   function changeTab(newTab: string) {
     selected = newTab;
@@ -77,8 +79,8 @@
             style={`--content: '${
               (index + 1).toString().padStart(2, '0') + '. '
             }'`}
-            on:click|preventDefault={() => (changeTab(tab.name))}
-            on:keydown|preventDefault={() => (changeTab(tab.name))}
+            on:click|preventDefault={() => changeTab(tab.name)}
+            on:keydown|preventDefault={() => changeTab(tab.name)}
           >
             {#if selected === tab.name}
               <span
@@ -112,4 +114,3 @@
     </div>
   </nav>
 </div>
-

@@ -1,7 +1,7 @@
 <script lang="ts">
   import { ArrowLeft, ArrowRight, Cake, MapPin, User } from 'lucide-svelte';
   import { fly } from 'svelte/transition';
-  import cards from '$lib/json/experience-cards.json';
+  import cards from '$lib/json/cards/experience-cards.json';
 
   let currentCard = 0;
 </script>

@@ -1,3 +1,11 @@
-import { writable } from 'svelte/store';
+import type { Language } from '$lib/types/Language';
+import { writable, type Writable } from 'svelte/store';
 
-export const darkmode = writable(false);
+class PreferencesStore {
+  constructor(
+    public darkmode: Writable<boolean> = writable(false),
+    public language: Writable<Language> = writable('en_US'),
+  ) { }
+}
+
+export const preferencsStore = new PreferencesStore();

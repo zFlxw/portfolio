@@ -1,6 +1,6 @@
 <script lang="ts">
   import { fly } from 'svelte/transition';
-  import projectCards from '$lib/json/project-cards.json';
+  import projectCards from '$lib/json/cards/project-cards.json';
 </script>
 
 <div

@@ -1,6 +1,6 @@
 <script lang="ts">
   import { fly } from 'svelte/transition';
-  import skillCards from '$lib/json/skill-cards.json';
+  import skillCards from '$lib/json/cards/skill-cards.json';
   import Tooltip from '$lib/components/Tooltip.svelte';
 
   let cards = skillCards;

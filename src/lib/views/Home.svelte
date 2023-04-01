@@ -1,9 +1,10 @@
 <script lang="ts">
-  import Tooltip from '$lib/components/Tooltip.svelte';
   import { Github, Copy } from 'lucide-svelte';
+  import { fly } from 'svelte/transition';
+
+  import Tooltip from '$lib/components/Tooltip.svelte';
   import CopyToClipboard from '$lib/components/utils/CopyToClipboard.svelte';
   import Button from '$lib/components/Button.svelte';
-  import { fly } from 'svelte/transition';
 
   const discordName = 'Flxw#7928';
   const redAvatar = '/img/avatars/red-avatar-crop.png';
@@ -39,8 +40,8 @@
   class="w-full max-w-4xl xl:max-w-6xl m-auto px-8"
   on:click={hideDiscordUsername}
   on:keydown={hideDiscordUsername}
-  in:fly="{{ y: -100, duration: 250, delay: 300 }}"
-  out:fly="{{ y: 100, duration: 250 }}" 
+  in:fly={{ y: -100, duration: 250, delay: 300 }}
+  out:fly={{ y: 100, duration: 250 }}
 >
   <div
     class="w-full flex flex-col-reverse lg:flex-row gap-8 lg:gap-0 items-center justify-center"
@@ -74,7 +75,9 @@
         </Button>
       </div>
     </div>
-    <div class="relative w-full mt-12 lg:mt-0 max-w-2xs aspect-square xl:max-w-xs">
+    <div
+      class="relative w-full mt-12 lg:mt-0 max-w-2xs aspect-square xl:max-w-xs"
+    >
       <img
         src={blueAvatar}
         alt="Wolf Avatar"

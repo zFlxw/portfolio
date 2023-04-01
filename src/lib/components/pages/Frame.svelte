@@ -1,7 +1,9 @@
 <script lang="ts">
   import Footer from '$lib/components/Footer.svelte';
   import Navbar from '$lib/components/Navbar.svelte';
-  import { darkmode } from '$lib/stores/preferences.store';
+  import { preferencsStore } from '$lib/stores/preferences.store';
+
+  const { darkmode } = preferencsStore;
 </script>
 
 <div class={`${$darkmode ? 'dark' : ''}`}>

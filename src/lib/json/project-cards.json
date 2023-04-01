@@ -2,7 +2,7 @@
   {
     "name": "Hondicard",
     "coverImage": "hondicard-cover.png",
-    "shortDescription": "Some info",
+    "shortDescription": "Hondicard is a card-based learning platform with focus on collaboration and free-to-use features.",
     "longDescription": "Some more info",
     "link": "https://hondicard.metahond.codes",
     "code": "https://www.hondicard.com",
@@ -15,48 +15,47 @@
     ]
   },
   {
-    "name": "Hondicard",
-    "coverImage": "hondicard-cover.png",
-    "shortDescription": "Some info",
+    "name": "(WIP) Toolbox",
+    "coverImage": "toolbox-cover.png",
+    "shortDescription": "Toolbox is a collection of tools, mostly for developers. Among these are a password generator, hash validator, and more.",
     "longDescription": "Some more info",
     "link": "https://hondicard.metahond.codes",
     "code": "https://www.hondicard.com",
     "images": [],
     "tags": [
-      "React",
+      "Svelte",
       "Node",
-      "NestJS",
+      "Tailwind",
       "TypeScript"
     ]
   },
   {
-    "name": "Hondicard",
-    "coverImage": "hondicard-cover.png",
-    "shortDescription": "Some info",
+    "name": "Sorting Algorithms",
+    "coverImage": "sorting-algorithms-cover.png",
+    "shortDescription": "Sorting Algorithms is an open-source GitHub repository that contains a collection of sorting algorithms, written in Java.",
     "longDescription": "Some more info",
     "link": "https://hondicard.metahond.codes",
     "code": "https://www.hondicard.com",
     "images": [],
     "tags": [
-      "React",
-      "Node",
-      "NestJS",
-      "TypeScript"
+      "Java",
+      "Gradle",
+      "Algorithms"
     ]
   },
   {
-    "name": "Hondicard",
-    "coverImage": "hondicard-cover.png",
-    "shortDescription": "Some info",
+    "name": "TheAlgorithms",
+    "coverImage": "the-algorithms-cover.png",
+    "shortDescription": "TheAlgorithms is an open-source GitHub organization where I contribute frequently, mostly in TypeScript.",
     "longDescription": "Some more info",
     "link": "https://hondicard.metahond.codes",
     "code": "https://www.hondicard.com",
     "images": [],
     "tags": [
-      "React",
+      "TypeScript",
       "Node",
-      "NestJS",
-      "TypeScript"
+      "Jest",
+      "Maths"
     ]
   }
 ]

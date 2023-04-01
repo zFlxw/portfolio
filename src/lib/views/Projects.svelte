@@ -14,7 +14,7 @@
     <div class="cards-wrapper mt-8 grid grid-cols-1 md:grid-cols-2 gap-4">
       {#each projectCards as card}
         <div
-          class="relative group w-full max-w-xl h-72 !rounded-lg bg-neutral-75 bg-cover bg-center cursor-pointer"
+          class="relative group w-full max-w-xl h-72 !rounded-lg bg-neutral-75 bg-cover bg-center border border-neutral-100 dark:border-neutral-700 cursor-pointer transition"
           style={`background-image: url('./img/projects/${card.coverImage}')`}
         >
           <div
@@ -39,7 +39,7 @@
               </div>
             </div>
             <div
-              class="absolute rounded-lg top-0 left-0 opacity-50 bg-neutral-900 w-full h-full -z-10"
+              class="absolute rounded-lg top-0 left-0 opacity-80 bg-neutral-900 w-full h-full -z-10"
             />
           </div>
         </div>

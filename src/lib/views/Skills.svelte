@@ -28,7 +28,7 @@
             href={card.link}
             target="_blank"
             rel="noopener"
-            class="group relative mx-auto p-6 border bg-neutral-75 border-neutral-200 dark:bg-neutral-750 dark:border-neutral-700 rounded-lg w-36 h-36 flex items-center transition"
+            class="group relative mx-auto p-6 border bg-neutral-75 hover:bg-neutral-100 border-neutral-200 dark:bg-neutral-750 dark:hover:bg-neutral-700 dark:border-neutral-700 rounded-lg w-36 h-36 flex items-center transition"
           >
             <div class="hidden group-hover:block ">
               <Tooltip id="skill-card">
@@ -52,7 +52,7 @@
             href={card.link}
             target="_blank"
             rel="noopener"
-            class="relative group mx-auto p-6 border bg-neutral-75 border-neutral-200 dark:bg-neutral-750 dark:border-neutral-700 rounded-lg w-36 h-36 flex items-center transition"
+            class="relative group mx-auto p-6 border bg-neutral-75 hover:bg-neutral-100 border-neutral-200 dark:bg-neutral-750 dark:hover:bg-neutral-700 dark:border-neutral-700 rounded-lg w-36 h-36 flex items-center transition"
           >
             <div class="hidden group-hover:block ">
               <Tooltip id="skill-card">

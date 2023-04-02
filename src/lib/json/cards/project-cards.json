@@ -19,8 +19,8 @@
     "coverImage": "toolbox-cover.png",
     "shortDescription": "Toolbox is a collection of tools, mostly for developers. Among these are a password generator, hash validator, and more.",
     "longDescription": "Some more info",
-    "link": "https://hondicard.metahond.codes",
-    "code": "https://www.hondicard.com",
+    "link": "",
+    "code": "",
     "images": [],
     "tags": [
       "Svelte",
@@ -34,8 +34,8 @@
     "coverImage": "sorting-algorithms-cover.png",
     "shortDescription": "Sorting Algorithms is an open-source GitHub repository that contains a collection of sorting algorithms, written in Java.",
     "longDescription": "Some more info",
-    "link": "https://hondicard.metahond.codes",
-    "code": "https://www.hondicard.com",
+    "link": "https://github.com/zFlxw/sorting-algorithms",
+    "code": "https://github.com/zFlxw/sorting-algorithms",
     "images": [],
     "tags": [
       "Java",
@@ -48,8 +48,8 @@
     "coverImage": "the-algorithms-cover.png",
     "shortDescription": "TheAlgorithms is an open-source GitHub organization where I contribute frequently, mostly in TypeScript.",
     "longDescription": "Some more info",
-    "link": "https://hondicard.metahond.codes",
-    "code": "https://www.hondicard.com",
+    "link": "https://the-algorithms.com/",
+    "code": "https://github.com/TheAlgorithms",
     "images": [],
     "tags": [
       "TypeScript",

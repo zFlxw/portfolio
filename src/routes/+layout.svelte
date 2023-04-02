@@ -1,5 +1,10 @@
 <script>
-  import "../app.css";
+  import Frame from '$lib/components/pages/Frame.svelte';
+  import '../app.css';
 </script>
 
-<slot />
+<main>
+  <Frame>
+    <slot />
+  </Frame>
+</main>

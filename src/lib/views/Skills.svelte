@@ -7,7 +7,7 @@
 </script>
 
 <div
-  class="w-full max-w-4xl lg:max-w-5xl mx-auto px-8"
+  class="w-full max-w-4xl lg:max-w-5xl px-8"
   in:fly={{ y: -100, duration: 250, delay: 300 }}
   out:fly={{ y: 100, duration: 250 }}
 >

@@ -11,7 +11,9 @@
     class="min-h-screen grid grid-rows-[min-content_1fr] bg-neutral-50 text-neutral-700 dark:bg-neutral-800 dark:text-neutral-300 transition-all"
   >
     <Navbar />
-    <slot />
+    <div class="w-full flex flex-col items-center justify-center overflow-y-hidden scrollbar-hide">
+      <slot />
+    </div>
     <Footer />
   </div>
 </div>

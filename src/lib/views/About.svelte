@@ -34,7 +34,7 @@
       </p>
     </div>
   </div>
-  <div class="mt-24 mb-16 xl:mb-0">
+  <div class="mt-24 mb-16 xl:mb-0 transition">
     <h2 class="text-4xl font-semibold text-center">My Journey</h2>
     <h3 class="text-2xl text-center">A brief overview</h3>
     <div class="relative mt-12">

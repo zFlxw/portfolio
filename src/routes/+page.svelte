@@ -5,6 +5,7 @@
   import About from '$lib/views/About.svelte';
   import Skills from '$lib/views/Skills.svelte';
   import Projects from '$lib/views/Projects.svelte';
+  import Legal from '$lib/views/Legal.svelte';
 
   function handleTabKeydown(
     event: KeyboardEvent & {
@@ -15,7 +16,7 @@
     if (isNaN(keyAsNum)) {
       return;
     }
-    if (keyAsNum < 1 || keyAsNum > 4) {
+    if (keyAsNum < 1 || keyAsNum > 5) {
       return;
     }
 
@@ -23,17 +24,14 @@
   }
 </script>
 
-<main>
-  <Frame>
-    {#if $activePage === 0}
-      <Home />
-    {:else if $activePage === 1}
-      <About />
-    {:else if $activePage === 2}
-      <Skills />
-    {:else if $activePage === 3}
-      <Projects />
-    {/if}
-  </Frame>
-</main>
+{#if $activePage === 0}
+  <Home />
+{:else if $activePage === 1}
+  <About />
+{:else if $activePage === 2}
+  <Skills />
+{:else if $activePage === 3}
+  <Projects />
+{/if}
+
 <svelte:window on:keyup={(event) => handleTabKeydown(event)} />

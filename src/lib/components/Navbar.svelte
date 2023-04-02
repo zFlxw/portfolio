@@ -60,7 +60,9 @@
   <nav
     class="text-neutral-800 dark:text-neutral-200 flex items-center justify-between px-12 py-2 border-b border-b-neutral-100 dark:border-b-neutral-700 w-full transition-colors"
   >
-    <img src={imageSource} alt="wolf-avatar" class="w-[40px]" />
+    <div on:click={() => activePage.set(0)} on:keyup={() => activePage.set(0)} class="cursor-pointer">
+      <img src={imageSource} alt="wolf-avatar" class="w-[40px]" />
+    </div>
     <div
       on:click|preventDefault={() => (burgerMenuOpen = true)}
       on:keydown|preventDefault={() => (burgerMenuOpen = true)}

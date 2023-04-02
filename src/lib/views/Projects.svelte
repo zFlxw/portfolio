@@ -17,8 +17,13 @@
           class="relative group w-full max-w-xl h-72 !rounded-lg bg-neutral-75 bg-cover bg-center border border-neutral-100 dark:border-neutral-700 cursor-pointer transition"
           style={`background-image: url('./img/projects/${card.coverImage}')`}
         >
-          <div
-            class="absolute w-full h-full xl:opacity-0 group-hover:opacity-100 transition ease-in-out duration-200 p-5 z-20"
+          <a
+            href={card.link ? card.link : undefined}
+            target="_blank"
+            rel="noopener"
+            class={`absolute w-full h-full xl:opacity-0 group-hover:opacity-100 transition ease-in-out duration-200 p-5 z-20 ${
+              card.link ? 'cursor-pointer' : 'cursor-default'
+            }`}
           >
             <div class="w-full h-full flex flex-col !justify-between">
               <div>
@@ -41,7 +46,7 @@
             <div
               class="absolute rounded-lg top-0 left-0 opacity-80 bg-neutral-900 w-full h-full -z-10"
             />
-          </div>
+          </a>
         </div>
       {/each}
     </div>
@@ -51,14 +56,5 @@
 <style lang="scss">
   .cards-wrapper > * {
     justify-self: center;
-  }
-
-  .scrollbar-hide::-webkit-scrollbar {
-    display: none;
-  }
-
-  .scrollbar-hide {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
   }
 </style>

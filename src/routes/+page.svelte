@@ -1,6 +1,5 @@
 <script lang="ts">
   import { activePage } from '$lib/stores/active-page.store';
-  import Frame from '$lib/components/pages/Frame.svelte';
   import Home from '$lib/views/Home.svelte';
   import About from '$lib/views/About.svelte';
   import Skills from '$lib/views/Skills.svelte';
@@ -16,7 +15,7 @@
     if (isNaN(keyAsNum)) {
       return;
     }
-    if (keyAsNum < 1 || keyAsNum > 5) {
+    if (keyAsNum < 1 || keyAsNum > 4) {
       return;
     }
 
@@ -32,6 +31,8 @@
   <Skills />
 {:else if $activePage === 3}
   <Projects />
+{:else if $activePage === 4}
+  <Legal />
 {/if}
 
 <svelte:window on:keyup={(event) => handleTabKeydown(event)} />

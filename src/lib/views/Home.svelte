@@ -1,6 +1,5 @@
 <script lang="ts">
   import { Github, Copy } from 'lucide-svelte';
-  import { fly } from 'svelte/transition';
 
   import Tooltip from '$lib/components/Tooltip.svelte';
   import CopyToClipboard from '$lib/components/utils/CopyToClipboard.svelte';
@@ -40,8 +39,6 @@
   class="w-full max-w-4xl xl:max-w-6xl m-auto px-8"
   on:click={hideDiscordUsername}
   on:keydown={hideDiscordUsername}
-  in:fly={{ y: -100, duration: 250, delay: 300 }}
-  out:fly={{ y: 100, duration: 250 }}
 >
   <div
     class="w-full flex flex-col-reverse lg:flex-row gap-8 lg:gap-0 items-center justify-center"
@@ -53,8 +50,8 @@
         Developer<span>.</span><br />
         Student<span>.</span>
       </h1>
-      <h2 class="text-center lg:text-left text-xl xl:text-2xl max-w-[36ch]">
-        Hey. I am Maik, also known as Flxw, and I code stuff. Learn more about
+      <h2 class="text-center lg:text-justify text-xl xl:text-2xl max-w-[36ch]">
+        Hey. I am Maik, also known as Flxw, and I create web applications and games. Learn more about
         me here:
       </h2>
       <!-- ONLY DESKTOP -->
@@ -165,7 +162,7 @@
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
           stroke-width="1.5"
-          class="w-12 fill-neutral-200 hover:fill-neutral-400 dark:fill-neutral-700 dark:hover:fill-neutral-500 cursor-pointer transition duration-200 ease-in-out"
+          class="w-[2.75em] fill-neutral-200 hover:fill-neutral-400 dark:fill-neutral-700 dark:hover:fill-neutral-500 cursor-pointer transition duration-200 ease-in-out"
         >
           <path
             fill-rule="evenodd"

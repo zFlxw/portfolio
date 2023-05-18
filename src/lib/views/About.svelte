@@ -1,16 +1,11 @@
 <script lang="ts">
   import { ArrowLeft, ArrowRight, Cake, MapPin, User } from 'lucide-svelte';
-  import { fly } from 'svelte/transition';
   import cards from '$lib/json/cards/experience-cards.json';
 
   let currentCard = 0;
 </script>
 
-<div
-  class="w-full max-w-4xl xl:max-w-5xl m-auto px-8"
-  in:fly={{ y: -100, duration: 250, delay: 300 }}
-  out:fly={{ y: 100, duration: 250 }}
->
+<div class="w-full max-w-4xl xl:max-w-5xl m-auto px-8">
   <div>
     <h2 class="mt-12 text-4xl font-semibold text-center">About Me</h2>
     <h3 class="text-2xl text-center">Who am I?</h3>
@@ -21,7 +16,7 @@
         <li><MapPin />Germany</li>
       </ul>
       <p
-        class="text-justify lg:text-xl max-w-[48ch] md:max-w-none border-t border-t-neutral-200 dark:border-t-neutral-700 pt-8 md:pt-0 md:border-t-0 md:border-l md:border-l-neutral-200 dark:md:border-l-neutral-700 md:pl-8 transition"
+        class="text-justify lg:text-xl max-w-[48ch] md:max-w-none border-t border-t-neutral-200 dark:border-t-neutral-700 pt-8 md:pt-0 md:border-t-0 md:border-l md:border-l-neutral-200 dark:md:border-l-neutral-700 md:pl-8"
       >
         Since my <span>early days</span>, I am fascinated by
         <span>computers</span>
@@ -83,7 +78,11 @@
     @apply flex gap-4 items-center;
   }
 
+  p {
+    @apply transition-colors;
+  }
+  
   p span {
-    @apply text-primary-blue dark:text-primary-red-500;
+    @apply text-primary-blue dark:text-primary-red-500 transition;
   }
 </style>

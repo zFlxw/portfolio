@@ -5,8 +5,6 @@
 
 <div
   class="w-full max-w-4xl lg:max-w-6xl mx-auto px-8"
-  in:fly={{ y: -100, duration: 250, delay: 300 }}
-  out:fly={{ y: 100, duration: 250 }}
 >
   <div>
     <h2 class="mt-12 text-4xl font-semibold text-center">My Projects</h2>

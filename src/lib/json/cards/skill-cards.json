@@ -29,12 +29,12 @@
     },
     {
       "name": "Java",
-      "link": "https:/www.java.com/",
+      "link": "https://www.java.com/",
       "source": "java.png"
     },
     {
       "name": "NestJS",
-      "link": "https:/www.nestjs.com/",
+      "link": "https://www.nestjs.com/",
       "source": "nestjs.svg"
     },
     {

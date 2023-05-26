@@ -2,30 +2,30 @@
   {
     "year": "2017",
     "title": "My First Projects",
-    "shortDesciprition": "My first projects were simple plugins for the game Minecraft. Therefore, the first programming language I learned was Java and it still is one of my favorite languages today."
+    "shortDesciprition": "My first projects were simple plugins for the game Minecraft. So the first programming language I learned was Java, and it is still one of my favorite languages today."
   },
   {
     "year": "2020",
     "title": "Melion - The first Milestone",
-    "shortDesciprition": "Melion was a Minecraft project I worked on from July 2020 to Februrary 2021. Even if this is a relatively short time, I learned much about coding principles and also found my way into web development.",
+    "shortDesciprition": "Melion was a Minecraft project that I worked on from July 2020 to February 2021. Even though this is a relatively short time, I learned a lot about coding principles and also found my way into web development.",
     "longDescription": "something more here"
   },
   {
     "year": "2021",
     "title": "Venterion - Another Minecraft Project",
-    "shortDesciprition": "After Melion, I started the Venterion project with friends. I was responsible for managing the projects and leading the development team. I got the most experience in server administration and DevOps from here.",
+    "shortDesciprition": "After Melion, I started the Venterion project with friends. I was responsible for managing the projects and leading the development team. This is were I got most of my experience in server administration and DevOps.",
     "longDescription": "something more here"
   },
   {
     "year": "2022",
     "title": "Metahond Development - Welcome to the Web",
-    "shortDesciprition": "I lost the interest in developing Minecraft plugins more and more. A friend of mine, Fl4wless, was also interested in web development and we started to create a new project together: Metahond.",
+    "shortDesciprition": "When I lost interest in developing Minecraft plugins, Fl4wless and I were interested in web development and we started working on a new project together: Metahond.",
     "longDescription": "something more here"
   },
   {
     "year": "2022",
     "title": "Hondicard - Metahond's Debut",
-    "shortDesciprition": "After learning the basics, we started working on our first project: Hondicard. We are still working on it and we made huge progress since we started working on it.",
+    "shortDesciprition": "After learning the basics, we started working on our first project: Hondicard. We are still working on it and we have made a lot of progress since we started.",
     "longDescription": "something more here"
   }
 ]

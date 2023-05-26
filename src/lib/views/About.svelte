@@ -13,19 +13,24 @@
       <ul class="text-xl md:text-2xl">
         <li><User />Maik</li>
         <li><Cake />23.01.2005</li>
-        <li><MapPin />Germany</li>
+        <li>
+          <MapPin /><a
+            href="https://en.wikipedia.org/wiki/Rhineland-Palatinate"
+            class="text-primary-blue hover:underline"
+            target="_blank">Germany</a
+          >
+        </li>
       </ul>
       <p
         class="text-justify lg:text-xl max-w-[48ch] md:max-w-none border-t border-t-neutral-200 dark:border-t-neutral-700 pt-8 md:pt-0 md:border-t-0 md:border-l md:border-l-neutral-200 dark:md:border-l-neutral-700 md:pl-8"
       >
-        Since my <span>early days</span>, I am fascinated by
-        <span>computers</span>
-        and how they work. Over the years I spent more and more time on learning
+        I have been fascinated by computers and how they work since my <span
+          >early childhood</span
+        >. Over the years I spent more and more time learning
         <span>how to code</span>. I created my first <span>own projects</span>,
-        I learned multiple technologies and today, I am still learning new
-        things. <br />My current goal is to study
-        <span>Computer Science</span> at a university after I finish the
-        <span>Abitur</span> in 2024.
+        I learned several technologies and today I am still learning new things.
+        <br />My current goal is to study
+        <span>computer science</span> at a university after I graduate in 2024.
       </p>
     </div>
   </div>
@@ -81,7 +86,7 @@
   p {
     @apply transition-colors;
   }
-  
+
   p span {
     @apply text-primary-blue dark:text-primary-red-500 transition;
   }

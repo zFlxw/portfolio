@@ -51,7 +51,7 @@
         Student<span>.</span>
       </h1>
       <h2 class="text-center lg:text-justify text-xl xl:text-2xl max-w-[36ch]">
-        Hey. I am Maik, also known as Flxw, and I create web applications and games. Learn more about
+        Hi. I am Maik, also known as Flxw, and I create web applications and games. You can learn more about
         me here:
       </h2>
       <!-- ONLY DESKTOP -->

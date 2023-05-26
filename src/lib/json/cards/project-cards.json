@@ -17,7 +17,7 @@
   {
     "name": "(WIP) Toolbox",
     "coverImage": "toolbox-cover.png",
-    "shortDescription": "Toolbox is a collection of tools, mostly for developers. Among these are a password generator, hash validator, and more.",
+    "shortDescription": "Toolbox is a collection of tools, mainly for developers. These include a password generator, a hash validator, and more.",
     "longDescription": "Some more info",
     "link": "",
     "code": "",
@@ -32,7 +32,7 @@
   {
     "name": "Sorting Algorithms",
     "coverImage": "sorting-algorithms-cover.png",
-    "shortDescription": "Sorting Algorithms is an open-source GitHub repository that contains a collection of sorting algorithms, written in Java.",
+    "shortDescription": "Sorting Algorithms is an open-source GitHub repository containing a collection of sorting algorithms, written in Java.",
     "longDescription": "Some more info",
     "link": "https://github.com/zFlxw/sorting-algorithms",
     "code": "https://github.com/zFlxw/sorting-algorithms",
@@ -46,7 +46,7 @@
   {
     "name": "TheAlgorithms",
     "coverImage": "the-algorithms-cover.png",
-    "shortDescription": "TheAlgorithms is an open-source GitHub organization where I contribute frequently, mostly in TypeScript.",
+    "shortDescription": "TheAlgorithms is an open-source GitHub organization where I made a few contributions, mostly in TypeScript.",
     "longDescription": "Some more info",
     "link": "https://the-algorithms.com/",
     "code": "https://github.com/TheAlgorithms",

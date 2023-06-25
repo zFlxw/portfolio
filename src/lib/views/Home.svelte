@@ -5,7 +5,7 @@
   import CopyToClipboard from '$lib/components/utils/CopyToClipboard.svelte';
   import Button from '$lib/components/Button.svelte';
 
-  const discordName = 'Flxw#7928';
+  const discordName = 'zflxw';
   const redAvatar = '/img/avatars/red-avatar-crop.png';
   const blueAvatar = '/img/avatars/blue-avatar-crop.png';
 
